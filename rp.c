@@ -242,7 +242,6 @@ max4 = 0.0;
 <<<<<<< HEAD
 =======
 
->>>>>>> 7c2c7237f2d27c9b4c6b4ffa519b9ab348043e43
 if(max1 < max2){
 maxEquation = max2;
 }
@@ -288,8 +287,6 @@ equation = ((rating[i * m + 4] == prob[k]) * (rating[i * m + 0] == urating[0] &&
 }
 */
 
-printf("The predicted rating for movie five is %.1lf.\n", maxEquation);
->>>>>>> 7c2c7237f2d27c9b4c6b4ffa519b9ab348043e43
 
 
   /* Deallocate memory. */
