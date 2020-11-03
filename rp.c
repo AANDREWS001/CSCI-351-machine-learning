@@ -203,8 +203,16 @@ printf("Movie 4's rating probabilities\n");
   }
 
   /* Output prediction. */
+<<<<<<< HEAD
+//double max, max1, max2, max3, max4, maxEquation;
+/*I have a feeling this isnt what exactly what you asked for
+for (int k = 0; k < 10; k++){
+for(size_t i=0; i<n; i++){
+
+=======
 double max1, max2, max3, max4, maxEquation;
 for (int k = 0; k < 10; k++){
+>>>>>>> 7c2c7237f2d27c9b4c6b4ffa519b9ab348043e43
 max1 = 0.0;
  if(prob1[k] > max1){
     max1 = prob1[k];
@@ -231,7 +239,10 @@ max4 = 0.0;
     max4 = prob4[k];
 }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 7c2c7237f2d27c9b4c6b4ffa519b9ab348043e43
 if(max1 < max2){
 maxEquation = max2;
 }
@@ -243,6 +254,31 @@ maxEquation = max3;
 }
 if(max3 < max4){
 maxEquation = max4;
+<<<<<<< HEAD
+}*/
+
+double max, max1, max2, max3, max4, maxEquation;
+
+for (int k = 0; k < 10;k++){
+for(size_t i = 0; i < n; i++){
+max1 = ((rating[i * m + 4]  == ((k+1) / 2.0)) * (rating[i * m + 0] == urating[0]) && (rating[i * m + 4] ==  (k+1) / 2.0));
+
+max2 = (rating[i * m + 1] == urating[1]) && (rating[i * m + 4] ==  (k+1) / 2.0);
+
+max3 = (rating[i * m + 2] == urating[2]) && (rating[i * m + 4] ==  (k+1) / 2.0);
+
+max4 = (rating[i * m + 3] == urating[3]) && (rating[i * m + 4] ==  (k+1) / 2.0);
+
+maxEquation = max1 * max2 * max3 * max4;
+
+if(maxEquation > max){
+max = maxEquation;
+}
+}
+}
+
+printf("The predicted rating for movie five is %.1lf.\n", max);
+=======
 }
 
 /*for (int k = 0; k<10;k++){
@@ -253,6 +289,7 @@ equation = ((rating[i * m + 4] == prob[k]) * (rating[i * m + 0] == urating[0] &&
 */
 
 printf("The predicted rating for movie five is %.1lf.\n", maxEquation);
+>>>>>>> 7c2c7237f2d27c9b4c6b4ffa519b9ab348043e43
 
 
   /* Deallocate memory. */
